@@ -100,7 +100,6 @@ class Main extends React.Component {
     this.cols = 50;
 
     this.state = {
-      //  in gen 0 there's a 50 x 30 grid with all cells turned off to start
       generation: 0,
       gridFull: Array(this.rows)
         .fill()
@@ -108,7 +107,6 @@ class Main extends React.Component {
     };
   }
 
-  // Method for changing state onClick
   selectBox = (row, col) => {
     let gridCopy = arrayClone(this.state.gridFull);
     gridCopy[row][col] = !gridCopy[row][col];
@@ -117,13 +115,10 @@ class Main extends React.Component {
     });
   };
 
-  // Method for seeding or beginning with random filled in boxes
   seed = () => {
     let gridCopy = arrayClone(this.state.gridFull);
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.cols; j++) {
-        // randomly chosen boxes function
-        // 1/4 chance for each box to start on
         if (Math.floor(Math.random() * 4) === 1) {
           gridCopy[i][j] = true;
         }
@@ -187,8 +182,7 @@ class Main extends React.Component {
 
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.cols; j++) {
-        let count = 0; // number of neighbors a cell has
-        // 8 possible neighbors being checked
+        let count = 0;
         if (i > 0) if (g[i - 1][j]) count++;
         if (i > 0 && j > 0) if (g[i - 1][j - 1]) count++;
         if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1]) count++;
@@ -198,9 +192,7 @@ class Main extends React.Component {
         if (i < this.rows - 1 && j > 0) if (g[i + 1][j - 1]) count++;
         if (i < this.rows - 1 && j < this.cols - 1)
           if (g[i + 1][j + 1]) count++;
-        // if alive and less than 2 or more than 3 neighbors it dies
         if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = false;
-        // if dead cell has exactly 3 neighbors it's born
         if (!g[i][j] && count === 3) g2[i][j] = true;
       }
     }
