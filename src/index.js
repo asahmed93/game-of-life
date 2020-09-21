@@ -209,7 +209,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div id="body">
+      <div>
         <span id="rules" title="rules">
           <ol>THE RULES:</ol>
 

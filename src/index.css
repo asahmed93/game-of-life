@@ -1,11 +1,7 @@
 body {
   background-image: url(https://image.winudf.com/v2/image1/Y29tLmFqbW9ua2V5YnJvLkdhbWVPZkxpZmUzRF9zY3JlZW5fMV8xNTU1NTk0MTE1XzAzNQ/screen-1.jpg?fakeurl=1&type=.jpg);
-  background-attachment: fixed;
   background-size: cover;
-}
-
-#body {
-  margin: 2rem;
+  background-attachment: fixed;
 }
 
 .btn {
@@ -76,21 +72,4 @@ h4 {
 ol {
   color: greenyellow;
   margin-top: 2rem;
-}
-
-span:hover {
-  color: orangered;
-  cursor: pointer;
-}
-
-@media (max-width: 750px) {
-  .btn {
-    font-size: 0.6rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .grid {
-    background-color: orange;
-  }
 }
