@@ -1,0 +1,96 @@
+body {
+  background-image: url(https://image.winudf.com/v2/image1/Y29tLmFqbW9ua2V5YnJvLkdhbWVPZkxpZmUzRF9zY3JlZW5fMV8xNTU1NTk0MTE1XzAzNQ/screen-1.jpg?fakeurl=1&type=.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#body {
+  margin: 2rem;
+}
+
+.btn {
+  background-color: greenyellow;
+  color: black;
+  margin-left: 1rem;
+}
+
+.box {
+  display: inline-block;
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+}
+
+.off {
+  background-color: rgb(195, 199, 191);
+}
+
+.on {
+  background-color: green;
+}
+
+.box:hover {
+  background: orange;
+}
+
+.controls {
+  margin: auto;
+  display: table;
+  margin-top: 10px;
+}
+
+.grid {
+  width: 150px;
+  line-height: 0;
+  margin: auto;
+  box-shadow: 0px 0px 20px white;
+  margin-top: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: greenyellow;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 1rem;
+}
+
+#rules {
+  text-align: center;
+  color: greenyellow;
+  margin: 3rem;
+  font-weight: 500;
+  margin-top: auto;
+  cursor: auto;
+}
+
+ol {
+  color: greenyellow;
+  margin-top: 2rem;
+}
+
+span:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .btn {
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .grid {
+    background-color: orange;
+  }
+}
